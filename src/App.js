@@ -10,7 +10,7 @@ const App = () => {
     const [places, setPlaces] = useState([]);
 
     const [coordinates, setCoordinates] = useState({});
-    const [bounds, setBounds] = useState(null);
+    const [bounds, setBounds] = useState({});
 
     // use user location coordinates for default 
     useEffect(() => {
@@ -20,9 +20,7 @@ const App = () => {
     }, []);
 
     useEffect(() => {
-
-        console.log(coordinates,bounds);
-        getPlacesData()
+        getPlacesData(bounds.sw, bounds.ne)
         .then((data) => {
             console.log(data);
 
@@ -30,6 +28,7 @@ const App = () => {
         })
         // to make bound and coordinates run every time the map changes >>
     },[coordinates,bounds]);
+    
     return(
         <>
             <CssBaseline />
