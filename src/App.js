@@ -9,17 +9,27 @@ import Map from "./components/Map/Map";
 const App = () => {
     const [places, setPlaces] = useState([]);
 
-    const [coordinates, setCoordinates] = useState({lat:0 ,lng: 0});
+    const [coordinates, setCoordinates] = useState({});
     const [bounds, setBounds] = useState(null);
 
+    // use user location coordinates for default 
     useEffect(() => {
+        navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}}) => {
+            setCoordinates({lat:latitude,lng:longitude});
+        });
+    }, []);
+
+    useEffect(() => {
+
+        console.log(coordinates,bounds);
         getPlacesData()
         .then((data) => {
             console.log(data);
 
             setPlaces(data);
         })
-    },[]);
+        // to make bound and coordinates run every time the map changes >>
+    },[coordinates,bounds]);
     return(
         <>
             <CssBaseline />
