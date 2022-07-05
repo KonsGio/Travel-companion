@@ -4,7 +4,7 @@ import { getPlacesData} from './api';
 import Header from "./components/Header/Header";
 import List from "./components/List/List";
 import Map from "./components/Map/Map";
-
+import { getWeatherData } from "./api";
 
 const App = () => {
     const [places, setPlaces] = useState([]);
@@ -15,6 +15,7 @@ const App = () => {
     const [rating, setRating] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [filteredPlaces, setfilteredPlaces] = useState([]);
+    const [weatherData, setWeatherData] = useState([]);
     // use user location coordinates for default 
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}}) => {
@@ -30,12 +31,13 @@ const App = () => {
     useEffect(() => {
         if(bounds.sw && bounds.ne){
 
-        
+        getWeatherData(coordinates.lat,coordinates.lng)
+            .then((data) => setWeatherData(data))
         setIsLoading(true);
         getPlacesData(type,bounds.sw, bounds.ne)
         .then((data) => {
             setPlaces(data?.filter((place)=> place.name && place.num_reviews > 0));
-            setfilteredPlaces([]);
+            setfilteredPlaces([])
             setIsLoading(false);
         })
     }
@@ -66,6 +68,7 @@ const App = () => {
                         coordinates={coordinates}
                         places={filteredPlaces.length? filteredPlaces : places}
                         setChildClicked={setChildClicked}
+                        weatherData={weatherData}
                     />
                 </Grid>
             </Grid>
