@@ -41,7 +41,7 @@ const App = () => {
     return(
         <>
             <CssBaseline />
-            <Header />
+            <Header setCoordinates ={setCoordinates}/>
             {/* object in double {{}} */}
             <Grid container spacing={3} style={{width: '100%' }}>
                 <Grid item xs={12} md={4}>
