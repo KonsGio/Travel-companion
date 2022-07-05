@@ -23,6 +23,10 @@ const PlaceDetails = ({place}) => {
         ))}
         <Typography gutterBottom variant='h5'>{place.name}</Typography>
         <Box display='flex' justifyContent='space-between'>
+          <Rating value={Number(place.rating)} readOnly/>
+          <Typography variant = "subtitle1">Out of {place.num_reviews} reviews</Typography>
+        </Box>
+        <Box display='flex' justifyContent='space-between'>
           <Typography variant = "subtitle1">Prices Range</Typography>
           <Typography gutterBottom variant = "subtitle1">{place.price}</Typography>
         </Box>
