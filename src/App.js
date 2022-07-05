@@ -40,7 +40,7 @@ const App = () => {
         })
     }
         // to make bound and coordinates run every time the map changes >>
-    },[type,coordinates,bounds]);
+    },[type,bounds]);
     
     return(
         <>
