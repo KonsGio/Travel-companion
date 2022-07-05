@@ -27,8 +27,8 @@ const PlaceDetails = ({place}) => {
           <Typography variant = "subtitle1">Out of {place.num_reviews} reviews</Typography>
         </Box>
         <Box display='flex' justifyContent='space-between'>
-          <Typography variant = "subtitle1">Prices Range</Typography>
-          <Typography gutterBottom variant = "subtitle1">{place.price}</Typography>
+          <Typography variant = "subtitle1">Prices</Typography>
+          <Typography gutterBottom variant = "subtitle1">{place.price_level}</Typography>
         </Box>
         <Box display='flex' justifyContent='space-between'>
           <Typography variant = "subtitle1">Ranking</Typography>
