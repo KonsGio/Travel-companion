@@ -18,10 +18,13 @@ const PlaceDetails = ({place}) => {
         title={place.name}
       />
       <CardContent>
+      {place?.cuisine?.map(({name}) => (
+          <Chip key={name} size='small' label={name} className={classes.chip}/>
+        ))}
         <Typography gutterBottom variant='h5'>{place.name}</Typography>
         <Box display='flex' justifyContent='space-between'>
           <Typography variant = "subtitle1">Prices Range</Typography>
-          <Typography gutterBottom variant = "subtitle1">{place.price_level}</Typography>
+          <Typography gutterBottom variant = "subtitle1">{place.price}</Typography>
         </Box>
         <Box display='flex' justifyContent='space-between'>
           <Typography variant = "subtitle1">Ranking</Typography>
@@ -35,9 +38,26 @@ const PlaceDetails = ({place}) => {
             </Typography>
           </Box>
         ))}
-        {place?.cuisine?.map(({name}) => (
-          <Chip key={name} size='small' label={name} className={classes.chip}/>
-        ))}
+       
+        {place?.address && (
+          <Typography gutterBottom variant='body2' color='textSecondary' className={classes.subtitle}>
+            <LocationOnIcon />{place.address}
+          </Typography>
+        )}
+        {place?.phone && (
+          <Typography gutterBottom variant='body2' color='textSecondary' className={classes.spacing}>
+            <PhoneIcon />{place.phone}
+          </Typography>
+        )}
+
+        <CardActions>
+          {/* <Button size='small' color='primary' onClick={() =>window.open(place.web_url,'_blank')}>
+            Visit TripAdvisor
+          </Button> */}
+          <Button size='small' color='primary' onClick={() =>window.open(place.website,'_blank')}>
+            Website
+          </Button>
+        </CardActions>
       </CardContent>
     </Card>
   )
