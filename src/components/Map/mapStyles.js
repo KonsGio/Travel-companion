@@ -1,4 +1,5 @@
-export default[
+export default(
+[
     {
         "featureType": "administrative.province",
         "elementType": "all",
@@ -345,3 +346,4 @@ export default[
         ]
     }
 ]
+)
