@@ -6,6 +6,7 @@ import Rating from '@material-ui/lab/Rating';
 
 // import mapStyles from '../../mapStyles';
 import useStyles from './styles.js';
+import mapStyles from './mapStyles';
 
 const Map = ({setCoordinates, setBounds, coordinates,places,setChildClicked,weatherData}) => {
   const classes = useStyles();
@@ -16,17 +17,17 @@ const Map = ({setCoordinates, setBounds, coordinates,places,setChildClicked,weat
     <div className={classes.mapContainer}>
 
       <GoogleMapReact
-        bootstrapURLKeys={{key : 'AIzaSyDPilMsfmIE353nVNv6MEQsXvCvJZKU9Vo'}}
+        bootstrapURLKeys={{key : process.env.REACT_APP_GOOGLE_MAPS_API_KEY}}
         defaultCenter={coordinates}
         center={coordinates}
         defaultZoom={14}
         margin={[50,50,50,50]}
-        options={''}
+        options={{disableDefaultUI:true, zoomControl:true,styles: mapStyles}}
         onChange={(e) => {
           setCoordinates({lat:e.center.lat, lng: e.center.lng});
           setBounds({ne:e.marginBounds.ne,sw:e.marginBounds.sw});
         }}
-        onChildClick={''}
+        onChildClick={(child) => setChildClicked(child)}
       >
         {places?.map((place, i) =>(
             <div className={classes.marketContainer}
@@ -56,7 +57,7 @@ const Map = ({setCoordinates, setBounds, coordinates,places,setChildClicked,weat
         ))}
         {weatherData?.list?.map((data, i) =>(
           <div key={i} lat={data.coord.lat} lng={data.coord.lon}>
-            <img src={`https://openweathermap.org/img/w${data.weather[0].icon}.png`}/>
+            <img src={`http://openweathermap.org/img/w/${data.weather[0].icon}.png`} height="100px" />
           </div>
         ))}
       </GoogleMapReact>
