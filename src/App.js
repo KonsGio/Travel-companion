@@ -8,10 +8,11 @@ import Map from "./components/Map/Map";
 
 const App = () => {
     const [places, setPlaces] = useState([]);
-
+    const [childClicked,setChildClicked] = useState(null);
     const [coordinates, setCoordinates] = useState({});
     const [bounds, setBounds] = useState({});
 
+    const [isLoading, setIsLoading] = useState(false)
     // use user location coordinates for default 
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}}) => {
@@ -20,9 +21,11 @@ const App = () => {
     }, []);
 
     useEffect(() => {
+        setIsLoading(true);
         getPlacesData(bounds.sw, bounds.ne)
         .then((data) => {
             setPlaces(data);
+            setIsLoading(false);
         })
         // to make bound and coordinates run every time the map changes >>
     },[coordinates,bounds]);
@@ -36,6 +39,8 @@ const App = () => {
                 <Grid item xs={12} md={4}>
                     <List 
                     places={places}
+                    childClicked={childClicked}
+                    isLoading={isLoading}
                     />
                 </Grid>
                 <Grid item xs={12} md={8}>
@@ -44,6 +49,7 @@ const App = () => {
                         setBounds={setBounds}
                         coordinates={coordinates}
                         places={places}
+                        setChildClicked={setChildClicked}
                     />
                 </Grid>
             </Grid>
