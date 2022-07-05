@@ -28,13 +28,17 @@ const App = () => {
     },[rating])
 
     useEffect(() => {
+        if(bounds.sw && bounds.ne){
+
+        
         setIsLoading(true);
         getPlacesData(type,bounds.sw, bounds.ne)
         .then((data) => {
-            setPlaces(data);
+            setPlaces(data?.filter((place)=> place.name && place.num_reviews > 0));
             setfilteredPlaces([]);
             setIsLoading(false);
         })
+    }
         // to make bound and coordinates run every time the map changes >>
     },[type,coordinates,bounds]);
     
