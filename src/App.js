@@ -11,8 +11,10 @@ const App = () => {
     const [childClicked,setChildClicked] = useState(null);
     const [coordinates, setCoordinates] = useState({});
     const [bounds, setBounds] = useState({});
-
-    const [isLoading, setIsLoading] = useState(false)
+    const [type, setType] = useState('restaurants');
+    const [rating, setRating] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+    const [filteredPlaces, setfilteredPlaces] = useState([]);
     // use user location coordinates for default 
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}}) => {
@@ -21,14 +23,19 @@ const App = () => {
     }, []);
 
     useEffect(() => {
+        const filteredPlaces = places.filter((place) => place.rating > rating);
+        setfilteredPlaces(filteredPlaces);
+    },[rating])
+
+    useEffect(() => {
         setIsLoading(true);
-        getPlacesData(bounds.sw, bounds.ne)
+        getPlacesData(type,bounds.sw, bounds.ne)
         .then((data) => {
             setPlaces(data);
             setIsLoading(false);
         })
         // to make bound and coordinates run every time the map changes >>
-    },[coordinates,bounds]);
+    },[type,coordinates,bounds]);
     
     return(
         <>
@@ -41,6 +48,10 @@ const App = () => {
                     places={places}
                     childClicked={childClicked}
                     isLoading={isLoading}
+                    type={type}
+                    setType={setType}
+                    rating={rating}
+                    setRating={setRating}
                     />
                 </Grid>
                 <Grid item xs={12} md={8}>
