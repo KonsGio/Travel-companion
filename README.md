@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Konsgio/Travel-companion">
-    <img src="public/icon.png" alt="Logo" width="80" height="80">
+    <img src="public/icon.png" alt="Logo" width="150" height="110">
   </a>
 
 <h3 align="center">Travel Companion</h3>
@@ -21,7 +21,7 @@
     <a href="https://github.com/Konsgio/Travel-companion"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Konsgio/Travel-companion">View Demo</a>
+    <a href="kgio-dev-map-app.netlify.">View Demo</a>
     ·
     <a href="https://github.com/Konsgio/Travel-companion/issues">Report Bug</a>
     ·
@@ -42,18 +42,11 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
+     <a href="#installation">Installation</a>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -73,68 +66,44 @@
 
 
 * [![React][React.js]][React-url]
-* [![Google maps api][Google maps api]][Google maps api-url]
-* [![React][React.js]][React-url]
-* [![React][React.js]][React-url]
+* [![Google-maps-api][Google-maps-api]][Google-maps-api-url]
+* [![CSS][CSS]][CSS-url]
+* [![RAPID-API][RAPID]][RAPID-url]
+* [![Travel-Advisor.API][TRAVEL]][TRAVEL-url]
+* [![Weather-map.API][WEATHER]][WEATHER-url]
+  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Log in to your google account at [Google map apis](https://developers.google.com/maps)
+2. Create a new map application and retrieve your api key
+3. Clone the repo
    ```sh
    git clone https://github.com/Konsgio/Travel-companion.git
    ```
-3. Install NPM packages
+4. Install NPM packages
    ```sh
-   npm install
+   npm i
    ```
-4. Enter your API in `config.js`
+5. Enter your API key in `/public/index.html`
    ```js
-   const API_KEY = 'ENTER YOUR API';
+   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=key"></script>
    ```
+6. Create a `.env` file in your project's main directory and paste the following
+   ```js
+   REACT_APP_GOOGLE_MAPS_API_KEY=
+   REACT_APP_RAPIDAPI_TRAVEL_API_KEY=
+   REACT_APP_RAPIDAPI_WEATHER_API_KEY=
+   ```
+7. To retrieve your `REACT_APP_RAPIDAPI_TRAVEL_API_KEY=` create an account and subscribe at [Rapid api - Travel advisor API](https://rapidapi.com/apidojo/api/travel-advisor). After that paste your key at the corresponting place in your `.env` file and at `/api/index.js`
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+8. To retrieve your `REACT_APP_RAPIDAPI_WEATHER_API_KEY` visit [Rapid api - Weather Map API](https://rapidapi.com/community/api/open-weather-map/) and repeat step 7
 
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/Konsgio/Travel-companion/issues) for a full list of proposed features (and known issues).
+9. After following all steps correctly, to run you application type `npm start` in a terminal and hit enter
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -161,7 +130,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the Apache License 2.0. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -170,20 +139,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Konstantinos Giovanitsas - <a href="mailto:konstantinos.giovanitsas@yahoo.com">Send me an email</a>
 
 Project Link: [https://github.com/Konsgio/Travel-companion](https://github.com/Konsgio/Travel-companion)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -208,75 +166,11 @@ Project Link: [https://github.com/Konsgio/Travel-companion](https://github.com/K
 [React-url]: https://reactjs.org/
 [Google-maps-api]: https://img.shields.io/badge/Google-FCC624?style=for-the-badge&logo=google&logoColor=black
 [Google-maps-api-url]: https://developers.google.com/maps/
-
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[CSS]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
+[CSS-url]: https://www.css-com.com
+[RAPID]: https://img.shields.io/badge/RAPID.API-239120?style=for-the-badge
+[RAPID-url]: https://www.css-com.com
+[TRAVEL]: https://img.shields.io/badge/Travel.advisor.API-2055D8?style=for-the-badge
+[TRAVEL-url]: https://www.css-com.com
+[WEATHER]: https://img.shields.io/badge/Weather.map.API-2055D8?style=for-the-badge
+[WEATHER-url]: https://www.css-com.com
