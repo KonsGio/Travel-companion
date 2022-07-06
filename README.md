@@ -150,18 +150,8 @@ Konstantinos Giovanitsas - <a href="mailto:konstantinos.giovanitsas@yahoo.com">S
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Konsgio/Travel-companion.svg?style=for-the-badge
-[contributors-url]: https://github.com/Konsgio/Travel-companion/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Konsgio/Travel-companion.svg?style=for-the-badge
-[forks-url]: https://github.com/Konsgio/Travel-companion/network/members
-[stars-shield]: https://img.shields.io/github/stars/Konsgio/Travel-companion.svg?style=for-the-badge
-[stars-url]: https://github.com/Konsgio/Travel-companion/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Konsgio/Travel-companion.svg?style=for-the-badge
-[issues-url]: https://github.com/Konsgio/Travel-companion/issues
-[license-shield]: https://img.shields.io/github/license/Konsgio/Travel-companion.svg?style=for-the-badge
-[license-url]: https://github.com/Konsgio/Travel-companion/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://www.linkedin.com/in/konstantinos-giovanitsas-10b511150/
 [product-screenshot]: public/map-app.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
