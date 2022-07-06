@@ -141,8 +141,6 @@ Distributed under the Apache License 2.0. See `LICENSE.txt` for more information
 
 Konstantinos Giovanitsas - <a href="mailto:konstantinos.giovanitsas@yahoo.com">Send me an email</a>
 
-Project Link: [Travel-companion](kgio-dev-map-app.netlify.app)
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
