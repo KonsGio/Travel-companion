@@ -11,11 +11,12 @@
 
   <p align="center">
     A travel companion that fetches real-time data from google
-    Featuring
-    *Restaurants around you
-    *Hotels 
-    *Attraction
-    You can find at <a href="https://www.kgio.dev">kgio.dev <a/> or directly <a href="https://kgio-dev-map-app.netlify.app">here.</a> 
+    <br/>
+    Featuring<br/>
+    *Restaurants around you<br/>
+    *Hotels <br/>
+    *Attraction<br/>
+    You can find it at <a href="https://www.kgio.dev">kgio.dev <a/> or directly <a href="https://kgio-dev-map-app.netlify.app">here.</a> 
     <br />
     <a href="https://github.com/Konsgio/Travel-companion"><strong>Explore the docs »</strong></a>
     <br />
