@@ -72,7 +72,10 @@
 * [![Travel-Advisor.API][TRAVEL]][TRAVEL-url]
 * [![Weather-map.API][WEATHER]][WEATHER-url]
   
+### Check this out
 
+* [![KGIO.DEV][SITE]][SITE-url]
+* [![LinkedIn][linkedin-shield]][linkedin-url]
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
