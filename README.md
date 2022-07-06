@@ -165,3 +165,5 @@ Konstantinos Giovanitsas - <a href="mailto:konstantinos.giovanitsas@yahoo.com">S
 [TRAVEL-url]: https://www.css-com.com
 [WEATHER]: https://img.shields.io/badge/Weather.map.API-2055D8?style=for-the-badge
 [WEATHER-url]: https://www.css-com.com
+[SITE]: https://img.shields.io/badge/kgio.dev-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white
+[SITE-url]: https://www.kgio.dev
